@@ -109,12 +109,8 @@ body {
     background: #16b5ff;
 }
 
-/* Responsive design */
+/* Responsive */
 @media (max-width: 480px) {
-    .calculator {
-        padding: 15px;
-    }
-
     .display-input {
         font-size: 2em;
     }
