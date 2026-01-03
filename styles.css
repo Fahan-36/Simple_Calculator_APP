@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #061226 0%, #022244 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #e6f0ff;
+}
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    background: linear-gradient(180deg, rgba(4,28,48,0.95), rgba(2,18,34,0.95));
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 20px 60px rgba(2, 12, 24, 0.6);
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid rgba(255,255,255,0.03);
+}
+
+.display {
+    margin-bottom: 20px;
+    background: rgba(3,36,58,0.6);
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid rgba(255,255,255,0.03);
+}
+
+.display-input {
+    width: 100%;
+    font-size: 2.5em;
+    border: none;
+    background: transparent;
+    text-align: right;
+    color: #e6f0ff;
+    font-weight: 600;
+    outline: none;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 14px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 10px;
+    background: #073a5a;
+    color: #e6f0ff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.btn:hover {
+    background: #0b5a88;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(3, 20, 40, 0.6);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(3, 12, 20, 0.6);
+}
+
+.btn-function {
+    background: #0f6fb6;
+    color: white;
+}
+
+.btn-function:hover {
+    background: #0b5a9a;
+}
+
+.btn-trig {
+    background: #0ea5c9;
+    color: #042a35;
+    font-size: 0.9em;
+}
+
+.btn-trig:hover {
+    background: #12b0d6;
+}
+
+.btn-equals {
+    background: #0ea5e9;
+    color: #042a35;
+    grid-column: span 2;
+    font-weight: 700;
+}
+
+.btn-equals:hover {
+    background: #16b5ff;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .calculator {
+        padding: 15px;
+    }
+
+    .display-input {
+        font-size: 2em;
+    }
+
+    .btn {
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    .buttons-grid {
+        gap: 8px;
+    }
+}
