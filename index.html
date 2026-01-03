@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="display">
+                <input type="text" id="display" class="display-input" readonly>
+            </div>
+            
+            <div class="buttons-grid">
+                <button class="btn btn-function" onclick="clearDisplay()" style="grid-column: span 2;">C</button>
+                <button class="btn btn-function" onclick="deleteLast()" style="grid-column: span 2;">DEL</button>
+                <button class="btn btn-function" onclick="appendOperator('/')">/</button>
+                <button class="btn btn-function" onclick="appendOperator('*')">×</button>
+
+                <button class="btn btn-trig" onclick="applyFunction('sin')">sin</button>
+                <button class="btn btn-trig" onclick="applyFunction('cos')">cos</button>
+                <button class="btn btn-trig" onclick="applyFunction('tan')">tan</button>
+                <button class="btn btn-trig" onclick="applyFunction('log')">log</button>
+                <button class="btn btn-trig" onclick="applyFunction('ln')">ln</button>
+                <button class="btn btn-trig" onclick="applyFunction('sqrt')">√</button>
+
+                <button class="btn" onclick="appendNumber('7')">7</button>
+                <button class="btn" onclick="appendNumber('8')">8</button>
+                <button class="btn" onclick="appendNumber('9')">9</button>
+                <button class="btn btn-function" onclick="appendOperator('-')">−</button>
+                <button class="btn btn-function" onclick="appendOperator('%')">%</button>
+                <button class="btn btn-function" onclick="appendOperator('+')">+</button>
+
+                <button class="btn" onclick="appendNumber('4')">4</button>
+                <button class="btn" onclick="appendNumber('5')">5</button>
+                <button class="btn" onclick="appendNumber('6')">6</button>
+                <button class="btn" onclick="appendNumber('1')">1</button>
+                <button class="btn" onclick="appendNumber('2')">2</button>
+                <button class="btn" onclick="appendNumber('3')">3</button>
+
+                <button class="btn" onclick="appendNumber('0')" style="grid-column: span 3;">0</button>
+                <button class="btn" onclick="appendDecimal()">.</button>
+                <button class="btn btn-equals" onclick="calculate()" style="grid-column: span 2;">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

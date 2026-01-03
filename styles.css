@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 350px;
+}
+
+.display {
+    margin-bottom: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.display-input {
+    width: 100%;
+    font-size: 2.5em;
+    border: none;
+    background: transparent;
+    text-align: right;
+    color: #333;
+    font-weight: 500;
+    outline: none;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    background: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-function {
+    background: #667eea;
+    color: white;
+}
+
+.btn-function:hover {
+    background: #5568d3;
+}
+
+.btn-trig {
+    background: #ed8936;
+    color: white;
+    font-size: 0.9em;
+}
+
+.btn-trig:hover {
+    background: #dd6b20;
+}
+
+.btn-equals {
+    background: #48bb78;
+    color: white;
+    grid-column: span 2;
+    font-weight: 600;
+}
+
+.btn-equals:hover {
+    background: #38a169;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .calculator {
+        padding: 15px;
+    }
+
+    .display-input {
+        font-size: 2em;
+    }
+
+    .btn {
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    .buttons-grid {
+        gap: 8px;
+    }
+}
